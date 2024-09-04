@@ -87,24 +87,11 @@ class Team:
                 self.__players.remove(player)
                 return player
         return f"Player {player_name} not found"
-# Create a player
-player1 = Player("John", 90, 85, 80, 75, 88)
-
-# Print player details
+player1 = Player("thu", 90, 85, 80, 75, 50)
 print(player1)
-
-# Create a team
 team = Team("Warriors", 95)
-
-# Add the player to the team
-print(team.add_player(player1))  # Output: Player John joined team Warriors
-
-# Try to add the same player again
-print(team.add_player(player1))  # Output: Player John has already joined
-
-# Remove the player by name
-removed_player = team.remove_player("John")
+print(team.add_player(player1)) 
+print(team.add_player(player1)) 
+removed_player = team.remove_player("thu")
 print(removed_player)
-
-# Try to remove a player not in the team
-print(team.remove_player("John"))  # Output: Player John not found
+print(team.remove_player("thu")) 
