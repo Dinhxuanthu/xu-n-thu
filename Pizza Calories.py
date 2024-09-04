@@ -71,24 +71,16 @@ class Pizza:
     def toppings(self):
         return self.__toppings
 
-    @property
     def toppings_capacity(self):
         return self.__toppings_capacity
-
-    
-    @name.setter
     def name(self, value: str):
         self.__name = value
 
-    @dough.setter
     def dough(self, value: Dough):
         self.__dough = value
-
-    @toppings_capacity.setter
     def toppings_capacity(self, value: int):
         self.__toppings_capacity = value
 
-  
     def add_topping(self, topping: Topping):
         if len(self.__toppings) >= self.__toppings_capacity:
             raise ValueError("Not enough space for another topping")
@@ -102,8 +94,8 @@ class Pizza:
         total_weight = self.__dough.weight + sum(self.__toppings.values())
         return total_weight
 
-pepperoni = Topping("Pepperoni", 50)
-mushrooms = Topping("Mushrooms", 30)
+pepperoni = Topping("Pepperoni", 150)
+mushrooms = Topping("Mushrooms", 90)
 thin_crust = Dough("Whole Wheat", "Crispy", 100)
 pizza = Pizza("Pepperoni Pizza", thin_crust, 5)
 pizza.add_topping(pepperoni)
